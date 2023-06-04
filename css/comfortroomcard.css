@@ -1,0 +1,48 @@
+.comfort__room__card {
+  position: relative;
+}
+
+.comfort__room__img {
+  border-radius: 24px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #0e1735;
+}
+
+.comfort__room__span {
+  position: absolute;
+  background: #dbeafe;
+  border-radius: 32px;
+  color: #1d4ed8;
+  padding: 8px 16px 8px 42px;
+  top: 332px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+}
+.comfort__room__span::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.comfort__room__title {
+  margin-top: 24px;
+}
+
+.Popular::before {
+  background-image: url("../../assets/images/fireCarousel.svg");
+}
+
+.Best__Deals::before {
+  background-image: url("../../assets/images/walletCarousel.svg");
+}
+
+.New__house::before {
+  background-image: url("../../assets/images/homeCarousel.svg");
+}/*# sourceMappingURL=comfortroomcard.css.map */
