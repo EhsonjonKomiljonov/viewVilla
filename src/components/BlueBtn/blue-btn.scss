@@ -1,7 +1,7 @@
 .villa__btn {
   display: block;
   width: 190px;
-  margin: 65px auto 0;
+  margin:0 auto 0;
   padding: 15px 34px;
   font-family: 'Montserrat';
   font-weight: 700;
@@ -16,8 +16,8 @@
   transition: all 0.3s ease-out;
 
   &:hover {
-    outline: 1px solid #381ddb;
-    background-color: #fff;
+    outline: 2px solid #381ddb;
+    background: #fff !important;
     color: #381ddb;
   }
 
