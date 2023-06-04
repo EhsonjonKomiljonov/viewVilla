@@ -1,22 +1,19 @@
 .contact {
   position: relative;
-  padding: 73px 0 192px;
 }
 
 .contact__map {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
-
   iframe {
-    width: 1550px;
+    width: 100%;
     height: 778px;
     border: 0;
   }
 }
 
 .contact__form {
+  position: absolute;
+  top: 106px;
+  left: 105px;
   width: 100%;
   max-width: 500px;
   padding: 42px 39px;
@@ -78,14 +75,14 @@
   }
 }
 
-@media screen and (max-width: 950px) {
-  .contact__map {
-    iframe {
-      width: 950px !important;
-      height: 778px !important;
-    }
+@media screen and (min-width: 1400px) {
+  .contact__form {
+    position: absolute;
+    left: calc(50% - 650px);
   }
+}
 
+@media screen and (max-width: 950px) {
   .contact__form {
     h2 {
       text-align: center;
@@ -93,12 +90,15 @@
   }
 }
 
-@media screen and (max-width: 576px) {
-  .contact__map {
-    iframe {
-      width: 576px !important;
-      height: 778px !important;
-    }
+@media screen and (max-width: 720px) {
+  .contact__form {
+    left: calc(50% - 250px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact__form {
+    left: 0;
   }
 }
 
