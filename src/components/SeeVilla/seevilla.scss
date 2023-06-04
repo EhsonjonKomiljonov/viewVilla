@@ -122,7 +122,7 @@
   }
   .see__villa__list {
     li {
-      margin-left: 48px !important;
+      max-width: 145px;
     }
   }
   .see__villa__right {
@@ -136,5 +136,13 @@
   .see__villa {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .see__villa__list {
+    li {
+      margin-left: 48px !important;
+    }
   }
 }
