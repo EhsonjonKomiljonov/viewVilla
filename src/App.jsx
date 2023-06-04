@@ -5,6 +5,7 @@ import { Header } from './components/Header/Header';
 import { ComfortRoom } from './components/ComfortRoom/ComfortRoom';
 import { VillaGallery } from './components/VillaGallery/VillaGallery';
 import { Contact } from './components/Contact/Contact';
+import { AboutUs } from './components/AboutUs/AboutUs';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <SeeVilla />
       <ComfortRoom />
+      <AboutUs />
       <VillaGallery />
       <Contact />
     </>

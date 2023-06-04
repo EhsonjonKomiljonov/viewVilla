@@ -1,0 +1,53 @@
+.about__us {
+  margin-top: 900px;
+  background: linear-gradient(269.47deg, #0037d3 2.21%, #002282 97.11%), linear-gradient(269.47deg, #002aa0 2.21%, #00185a 97.11%);
+}
+
+.about__us__inner {
+  padding-top: 241px;
+  padding-bottom: 241px;
+  max-width: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-image: url("../../assets/images/about__us__bg.png");
+}
+
+.about__us__title {
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 70px;
+  text-transform: capitalize;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 24px;
+}
+.about__us__title span {
+  font-family: "Raleway";
+  -webkit-text-stroke: 1px #fff;
+  -webkit-text-fill-color: transparent;
+}
+
+.about__us__text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.75;
+  margin-bottom: 23px;
+  max-width: 496px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1300px) {
+  .about__us {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .about__us__inner {
+    background-image: none;
+  }
+}/*# sourceMappingURL=aboutus.css.map */
