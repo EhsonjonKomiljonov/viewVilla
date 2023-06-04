@@ -36,7 +36,7 @@ export const SeeVilla = () => {
               </ul>
               <SeeVillaBtn />
             </div>
-            <div className='see__villa_right'>
+            <div className='see__villa__right'>
               <img
                 src={seeVillaBg}
                 alt=''
