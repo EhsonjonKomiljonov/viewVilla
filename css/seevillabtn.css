@@ -1,0 +1,21 @@
+.see__villa__btn {
+  padding: 13px 35px 13px 56px;
+  color: #1d4ed8;
+  background-color: #fff;
+  border-radius: 32px;
+  border: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.see__villa__btn::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../assets/images/seeVillaContactBtn.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  right: calc(100% - 16px - 24px);
+  z-index: 3;
+}/*# sourceMappingURL=seevillabtn.css.map */

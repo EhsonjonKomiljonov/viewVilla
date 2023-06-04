@@ -1,0 +1,109 @@
+.see__villa {
+  padding: 128px 120px 75px 137px;
+  background-image: linear-gradient(269.47deg, #0037d3 2.21%, #002282 97.11%);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.see__villa__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.see__villa__title {
+  margin: 0;
+  margin-bottom: 16px;
+  max-width: 480px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  color: #ffffff;
+}
+
+.see__villa__text {
+  width: 370px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #ffffff;
+  opacity: 0.75;
+}
+
+.see__villa__info {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  color: #ffffff;
+  opacity: 0.75;
+  margin-top: 16px;
+  margin-bottom: 22px;
+}
+
+.see__villa__list {
+  max-width: 440px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 5px;
+  margin-top: 16px;
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #f0f3fd;
+}
+
+.see__villa__item {
+  max-width: 193.5px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: capitalize;
+  color: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.see__villa__item:nth-child(1) {
+  margin-left: 48px;
+}
+
+.see__villa__item:nth-child(2) {
+  margin: 0;
+}
+
+.see__villa__item:nth-child(3) {
+  margin-left: 48px;
+}
+
+.see__villa__item:nth-child(4) {
+  margin: 0;
+}
+
+.see__villa__item::before {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  right: calc(100% + 16px);
+}
+
+.see__villa__item:nth-child(1)::before {
+  background-image: url('../../assets/images/seeVillaBed.svg');
+}
+
+.see__villa__item:nth-child(2)::before {
+  background-image: url('../../assets/images/seeVillaBath.svg');
+}
+
+.see__villa__item:nth-child(3)::before {
+  background-image: url('../../assets/images/seeVillaGarage.svg');
+}
+
+.see__villa__item:nth-child(4)::before {
+  background-image: url('../../assets/images/seeVillaGarage.svg');
+}
