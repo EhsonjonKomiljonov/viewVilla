@@ -44,6 +44,11 @@
       font-size: 14px;
       line-height: 22px;
       color: #888b97;
+      outline: none;
+
+      &:focus {
+        outline: 2px solid #381DDB;
+      }
     }
 
     textarea {
@@ -58,6 +63,10 @@
       font-size: 14px;
       line-height: 22px;
       color: #888b97;
+
+      &:focus {
+        outline: 2px solid #381DDB;
+      }
     }
 
     input::placeholder,

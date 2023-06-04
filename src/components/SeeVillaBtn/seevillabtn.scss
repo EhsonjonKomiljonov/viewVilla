@@ -1,5 +1,5 @@
 .see__villa__btn {
-  cursor: pointer;
+  width: 200px;
   padding: 13px 35px 13px 56px;
   color: #1d4ed8;
   background-color: #fff;
@@ -8,6 +8,8 @@
   position: relative;
   display: flex;
   align-items: center;
+  cursor: pointer;
+
   &::before {
     content: '';
     position: absolute;
