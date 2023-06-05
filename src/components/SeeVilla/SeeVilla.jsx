@@ -136,6 +136,7 @@ export const SeeVilla = () => {
               onMouseMove={handleMouse}
             >
               <motion.img
+              className='desktop-img'
                 src={seeVillaBg}
                 alt=""
                 style={{
@@ -143,6 +144,7 @@ export const SeeVilla = () => {
                   rotateY: rotateY,
                 }}
               />
+              <img className='mobile-img' src={seeVillaBg} alt="Villa" />
             </motion.div>
           </div>
         </div>

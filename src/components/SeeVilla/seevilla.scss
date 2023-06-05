@@ -109,6 +109,10 @@
   background-size: 32px;
 }
 
+.mobile-img {
+  display: none;
+}
+
 .see__villa__item:nth-child(1)::before {
   background-image: url('../../assets/images/seeVillaBed.svg');
 }
@@ -144,11 +148,14 @@
     flex-direction: column;
   }
   .see__villa__right {
-    img {
-      vertical-align: middle;
-      object-fit: cover;
+    .desktop-img {
+      display: none;
+    }
+    .mobile-img {
+      display: block;
       width: 100%;
-      margin-top: 40px;
+      height: auto;
+      margin-top: 20px;
     }
   }
   .see__villa {
