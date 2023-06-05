@@ -119,16 +119,6 @@
   background-image: url('../../assets/images/seeVillaGarage.svg');
 }
 
-.see__villa__right {
-  img {
-    cursor: grab;
-
-    &:active {
-      cursor: grabbing;
-    }
-  }
-}
-
 @media screen and (max-width: 1310px) {
   .see__villa__inner {
     flex-direction: column;

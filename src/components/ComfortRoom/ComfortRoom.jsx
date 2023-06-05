@@ -8,9 +8,9 @@ import { ComfortRoomCard } from './../ComfortRoomCard/ComfortRoomCard';
 export const ComfortRoom = () => {
   const settings = {
     autoplay: true,
-    slidesToShow: 3.2,
-    slidesToScroll: 1.8,
-    autoplaySpeed: 1000,
+    slidesToShow: 3.4,
+    slidesToScroll: 0.6,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1300,
@@ -18,7 +18,7 @@ export const ComfortRoom = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           autoplay: true,
-          autoplaySpeed: 1000,
+          autoplaySpeed: 2000,
         },
       },
       {
@@ -27,7 +27,7 @@ export const ComfortRoom = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           autoplay: true,
-          autoplaySpeed: 1000,
+          autoplaySpeed: 2000,
         },
       },
     ],

@@ -7,7 +7,18 @@ import seeVillaBg from '../../assets/images/seeVillaBg.png';
 import { useMotionValue, useTransform, motion } from 'framer-motion';
 
 export const SeeVilla = () => {
-  const constraintsRef = useRef();
+  const x = useMotionValue(200);
+  const y = useMotionValue(200);
+
+  const rotateX = useTransform(y, [0, 700], [10, -10]);
+  const rotateY = useTransform(x, [0, 700], [-10, 10]);
+
+  function handleMouse(event) {
+    const rect = event.currentTarget.getBoundingClientRect();
+
+    x.set(event.clientX - rect.left);
+    y.set(event.clientY - rect.top);
+  }
 
   const container = {
     hidden: { opacity: 1 },
@@ -65,9 +76,9 @@ export const SeeVilla = () => {
                   className="see__villa__title__span"
                   variants={child}
                 >
-                  Villamizni
+                  Villamizda
                 </motion.span>
-                <motion.span variants={child}> ko’ring</motion.span>
+                <motion.span variants={child}> dam oling</motion.span>
               </motion.h2>
               <motion.p
                 className="see__villa__text"
@@ -95,7 +106,11 @@ export const SeeVilla = () => {
               >
                 {seeVillaData.map((el) => {
                   return (
-                    <motion.li variants={item} key={el.title} className="see__villa__item">
+                    <motion.li
+                      variants={item}
+                      key={el.title}
+                      className="see__villa__item"
+                    >
                       <p>{el.title}</p>
                     </motion.li>
                   );
@@ -111,12 +126,22 @@ export const SeeVilla = () => {
                 <SeeVillaBtn />
               </motion.div>
             </div>
-            <motion.div ref={constraintsRef} className="see__villa__right">
+            <motion.div
+              className="see__villa__right"
+              style={{
+                placeItems: 'center',
+                placeContent: 'center',
+                perspective: 400,
+              }}
+              onMouseMove={handleMouse}
+            >
               <motion.img
-                drag
-                dragConstraints={constraintsRef}
                 src={seeVillaBg}
                 alt=""
+                style={{
+                  rotateX: rotateX,
+                  rotateY: rotateY,
+                }}
               />
             </motion.div>
           </div>

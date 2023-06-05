@@ -117,6 +117,8 @@
 
   .open-btn {
     display: block;
+    width: 25px;
+    height: 25px;
   }
 }
 
@@ -153,16 +155,21 @@
     text-transform: capitalize;
     color: #1b1c57;
 
-    span {
+    span.one {
       font-family: 'Raleway';
       font-weight: 600;
       color: #fff;
-      -webkit-text-stroke: 1px #1B1C57;
+      -webkit-text-stroke: 1px #1b1c57;
       -webkit-text-fill-color: transparent;
     }
 
-    span:nth-child(2) {
+    span.two {
       margin-right: 100px;
+      font-family: 'Raleway';
+      font-weight: 600;
+      color: #fff;
+      -webkit-text-stroke: 1px #1b1c57;
+      -webkit-text-fill-color: transparent;
     }
   }
 
@@ -185,7 +192,8 @@
   .bottom__content {
     max-width: 450px;
 
-    span {
+    span.one,
+    .two {
       margin: 0 !important;
       -webkit-text-fill-color: #fff !important;
     }
@@ -203,7 +211,7 @@
 
   .bottom__content {
     margin: 0 auto;
-    
+
     h1 {
       text-align: center;
     }
@@ -215,22 +223,22 @@
 }
 
 @media screen and (max-width: 485px) {
-  .bottom__content { 
-    h1 { 
+  .bottom__content {
+    h1 {
       margin: 0 0 15px;
       font-size: 35px;
       line-height: 40px;
-    } 
+    }
   }
 }
 
 @media screen and (max-width: 365px) {
   .bottom__content {
-    h1 { 
+    h1 {
       margin: 0 0 15px;
       font-size: 30px;
       line-height: 40px;
-    } 
+    }
 
     p {
       font-size: 15px;

@@ -5,7 +5,7 @@ import Villa2 from '../../assets/images/villa-2.svg';
 import Villa3 from '../../assets/images/villa-3.svg';
 import Villa4 from '../../assets/images/villa-4.jpg';
 import { BlueBtn } from '../BlueBtn/BlueBtn';
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 
 export const VillaGallery = () => {
   const container = {
