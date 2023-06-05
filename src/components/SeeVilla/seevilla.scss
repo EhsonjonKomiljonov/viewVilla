@@ -94,13 +94,19 @@
   margin: 0;
 }
 
+.see__villa__item:nth-child(5) {
+  margin-left: 48px;
+}
+
 .see__villa__item::before {
   content: '';
   position: absolute;
+  z-index: 3;
   max-width: 32px;
   width: 100%;
   height: 32px;
   right: calc(100% + 16px);
+  background-size: 32px;
 }
 
 .see__villa__item:nth-child(1)::before {
@@ -116,7 +122,16 @@
 }
 
 .see__villa__item:nth-child(4)::before {
-  background-image: url('../../assets/images/seeVillaGarage.svg');
+  background-image: url('../../assets/images/seeVillaStairs.svg');
+}
+
+.see__villa__item:nth-child(5)::before {
+  background-image: url('../../assets/images/pool.svg');
+}
+
+.see__villa__item:nth-child(6)::before {
+  background-image: url('../../assets/images/livingroom.png');
+  background-size: contain;
 }
 
 @media screen and (max-width: 1310px) {
@@ -127,11 +142,6 @@
 @media screen and (max-width: 740px) {
   .see__villa__inner {
     flex-direction: column;
-  }
-  .see__villa__list {
-    li {
-      max-width: 145px;
-    }
   }
   .see__villa__right {
     img {
@@ -147,10 +157,9 @@
   }
 }
 
-@media screen and (max-width: 385px) {
-  .see__villa__list {
-    li {
-      margin-left: 48px !important;
-    }
+@media screen and (max-width: 480px) {
+  .see__villa__item {
+    margin-left: 48px !important;
+    padding: 3px 0;
   }
 }

@@ -46,3 +46,37 @@
 .New__house::before {
   background-image: url('../../assets/images/homeCarousel.svg');
 }
+
+@media screen and (max-width: 385px) {
+  .comfort__room__card {
+    width: 100%;
+    max-width: 300px;
+
+    img {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  .comfort__room__span {
+    top: 290px;
+    left: 13px;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .comfort__room__card {
+    width: 100%;
+    max-width: 250px;
+
+    img {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+
+  .comfort__room__span {
+    top: 235px;
+    left: 9px;
+  }
+}

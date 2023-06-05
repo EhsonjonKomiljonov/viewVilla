@@ -37,7 +37,7 @@ export const Contact = () => {
       if (data.status == 200) {
         loadingRef.current.style.display = 'none';
         successRef.current.style.display = 'flex';
-        evt.resetForm()
+        evt.resetForm();
 
         setTimeout(() => {
           document.body.style.overflow = 'auto';
@@ -112,9 +112,15 @@ export const Contact = () => {
         </div>
         <div className="contact__map">
           <iframe
-            initial={{ x: -200 }}
             id="myIframe"
-            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7817.31017938598!2d74.57109035946885!3d42.86788461659766!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1685882549813!5m2!1sru!2s"
+            src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d5958.752156129644!2d70.05670205677457!3d41.6908163928344!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDQxJzI3LjAiTiA3MMKwMDMnNDAuNSJF!5e0!3m2!1sru!2s!4v1685981916239!5m2!1sru!2s"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <iframe
+          className='iframe'
+            src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d5958.752156129644!2d70.05670205677457!3d41.6908163928344!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDQxJzI3LjAiTiA3MMKwMDMnNDAuNSJF!5e0!3m2!1sru!2s!4v1685981916239!5m2!1sru!2s" 
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
