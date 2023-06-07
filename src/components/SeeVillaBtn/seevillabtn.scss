@@ -1,6 +1,7 @@
 .see__villa__btn {
-  width: 200px;
-  padding: 13px 35px 13px 56px;
+  max-width: 200px;
+  width: 100%;
+  padding: 13px 0 13px 56px;
   color: #1d4ed8;
   background-color: #fff;
   border-radius: 32px;
@@ -9,7 +10,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-
+  font-family: 'Bruno Ace SC';
   &::before {
     content: '';
     position: absolute;

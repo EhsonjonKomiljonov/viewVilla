@@ -14,7 +14,8 @@
   font-size: 32px;
   line-height: 40px;
   color: #1b1c57;
-}
+  font-family: 'Bruno Ace SC';
+  }
 .slick-arrow {
   position: inherit;
 }
@@ -96,18 +97,18 @@
 }
 
 @media screen and (max-width: 505px) {
-  .slick-prev { 
+  .slick-prev {
     left: calc(50% - 50px);
-    top: calc(100% + 31px); 
+    top: calc(100% + 31px);
     width: 50px;
-    height: 42px; 
+    height: 42px;
   }
 
-  .slick-next { 
+  .slick-next {
     left: calc(50% + 10px);
-    top: calc(100% + 31px); 
+    top: calc(100% + 31px);
     width: 50px;
-    height: 42px;  
+    height: 42px;
   }
 }
 
