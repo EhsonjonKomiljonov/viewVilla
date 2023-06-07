@@ -58,7 +58,7 @@ export const VillaGallery = () => {
             </motion.div>
           </motion.div>
           <motion.div
-            initial={{ x: -300 }}
+            initial={{ x: -200 }}
             whileInView={{
               x: 0,
               transition: { duration: 0.3, type: 'spring', stiffness: 100 },
