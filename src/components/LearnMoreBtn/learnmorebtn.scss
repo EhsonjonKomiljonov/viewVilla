@@ -19,7 +19,7 @@
     width: 24px;
     height: 24px;
   }
-  
+
   span {
     font-family: 'Montserrat';
     font-style: normal;
@@ -30,5 +30,20 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .learn__more__btn {
+    padding: 13px 60px 13px 20px;
+
+    &::after { 
+      left: calc(50% + 40px); 
+    }
+
+    span {
+      font-size: 15px !important;
+      line-height: 20px;
+    }
   }
 }

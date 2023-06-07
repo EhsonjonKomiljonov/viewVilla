@@ -155,7 +155,7 @@
       display: block;
       width: 100%;
       height: auto;
-      margin-top: 20px;
+      margin-top: 30px;
     }
   }
   .see__villa {
@@ -168,5 +168,17 @@
   .see__villa__item {
     margin-left: 48px !important;
     padding: 3px 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .see__villa__title {
+    font-size: 25px;
+    line-height: 34px;
+  }
+
+  p {
+    font-size: 15px !important;
+    line-height: 20px !important;
   }
 }

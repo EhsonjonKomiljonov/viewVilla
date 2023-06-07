@@ -60,6 +60,18 @@
 
 /* MONTSERRAT */
 
+/* Bruno Ace SC */
+
+@font-face {
+  font-display: swap;
+  font-family: 'Bruno Ace SC';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/bruno-ace-sc-v1-latin-regular.woff2') format('woff2');
+}
+
+/* Bruno Ace SC */
+
 /* FONTS */
 
 html {
@@ -121,3 +133,97 @@ p {
   white-space: nowrap;
   width: 1px;
 }
+
+/* LOADER */
+
+.loader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.loader > img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.loader > p {
+  font-family: 'Bruno Ace SC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 92px;
+  line-height: 116px;
+}
+
+@media screen and (max-width: 675px) {
+  .loader > p {
+    font-size: 76px;
+    line-height: 96px;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .loader > img {
+    max-width: 350px;
+  }
+  .loader > p {
+    font-size: 46px;
+    line-height: 56px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .loader > img {
+    max-width: 290px;
+  }
+  .loader > p {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  font-size: 60px;
+}
+
+.waviy span {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    88.34deg,
+    #096fa9 1.85%,
+    rgba(9, 111, 169, 0.3) 86.47%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation-name: waviy ;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes waviy {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-50px);
+  }
+}
+
+/* LOADER */

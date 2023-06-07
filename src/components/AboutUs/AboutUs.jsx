@@ -101,8 +101,8 @@ export const AboutUs = () => {
                 x: 600,
               }}
               whileInView={{
-                x: 150,
-                transition: { duration: 0.5, type: 'spring', stiffness: 100 },
+                x: -20,
+                transition: { duration: 0.5, type: 'spring', stiffness: 50 },
               }}
             />{' '} */}
             <img

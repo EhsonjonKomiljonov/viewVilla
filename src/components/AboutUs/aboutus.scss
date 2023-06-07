@@ -24,6 +24,7 @@
 }
 
 .about__us__title {
+  font-family: 'Bruno Ace SC';
   font-weight: 600;
   font-size: 56px;
   line-height: 70px;
@@ -81,10 +82,11 @@
   }
 }
 
+
 @media screen and (max-width: 1000px) {
-  // .about__us__inner {
-  //   background-image: none;
-  // }
+  .about__us__inner {
+    background-image: none;
+  }
   .about__us__right {
     width: 0;
   }
@@ -102,5 +104,39 @@
       -webkit-text-stroke-color: #3d3d3d;
       -webkit-text-fill-color: transparent;
     }
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .about__us__left {
+    padding: 180px 0;
+  }
+
+  .about__us__title {
+    font-size: 44px;
+    line-height: 50px;
+  }
+
+  .about__us__text {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .about__us__right {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .about__us__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .about__us__title {
+    font-size: 25px;
+    line-height: 34px;
   }
 }
