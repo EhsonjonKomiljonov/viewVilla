@@ -93,18 +93,6 @@ export const AboutUs = () => {
             </motion.div>
           </div>
           <div className='about__us__right'>
-            {/* <motion.img
-              src={Line}
-              alt='line'
-              className='about__us__line'
-              initial={{
-                x: 600,
-              }}
-              whileInView={{
-                x: -20,
-                transition: { duration: 0.5, type: 'spring', stiffness: 50 },
-              }}
-            />{' '} */}
             <img
               src={Line}
               alt=''

@@ -82,11 +82,7 @@
   }
 }
 
-
 @media screen and (max-width: 1000px) {
-  .about__us__inner {
-    background-image: none;
-  }
   .about__us__right {
     width: 0;
   }
@@ -127,7 +123,7 @@
   }
 }
 
-@media screen and (max-width: 365px) {
+@media screen and (max-width: 410px) {
   .about__us__title {
     font-size: 32px;
     line-height: 40px;
