@@ -59,7 +59,7 @@
       width: 100%;
       height: auto;
       transition: all 0.7s ease;
-      border-radius: 48px;
+      border-radius: 24px;
       cursor: zoom-in;
     }
   }
@@ -81,15 +81,17 @@
   bottom: 0;
   left: 0;
   z-index: 5;
-  background-color: #1b1c5787;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 !important;
+  background-color: #1b1c5787;
 }
 
 .open {
-  width: 700px !important;
+  width: 600px !important;
   height: auto;
+  transition: all 0.7s ease;
   cursor: zoom-out !important;
 }
 
@@ -97,7 +99,7 @@
 
 @media screen and (min-width: 1250px) {
   .grid {
-    width: 75.5vw;
+    width: 1100px;
   }
 }
 
@@ -110,22 +112,34 @@
   }
 }
 
+@media screen and (max-width: 620px) {
+  .open {
+    width: 450px !important;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .open {
+    width: 350px !important;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .grid {
     width: 100%;
     max-width: 400px;
 
     &__view {
-      flex-direction: column;
+      flex-direction: column !important;
+
+      .grid__inner {
+        margin: 20px 0 0 0 !important;
+      }
     }
 
     &__inner {
       margin-top: 20px;
       margin-left: 0;
-
-      div + div {
-        display: none;
-      }
     }
   }
 }
@@ -140,25 +154,13 @@
       line-height: 40px;
     }
   }
+
+  .grid__inner {
+    div + div {
+      margin-top: 10px;
+    }
+  }
 }
-
-// @media screen and (max-width: 465px) {
-//   .villa__grid {
-//     justify-content: space-evenly;
-//     div {
-//       width: 150px !important;
-//       height: 150px !important;
-//     }
-
-//     div:nth-child(2) {
-//       width: 150px !important;
-//       height: 150px !important;
-//       img {
-//         width: 150px !important;
-//       }
-//     }
-//   }
-// }
 
 @media screen and (max-width: 365px) {
   .villa {
@@ -167,25 +169,11 @@
       line-height: 34px;
     }
   }
+
+  .open {
+    width: 250px !important;
+  }
 }
-
-// @media screen and (max-width: 350px) {
-//   .villa__grid {
-//     justify-content: space-between;
-//     div {
-//       width: 130px !important;
-//       height: 130px !important;
-//     }
-
-//     div:nth-child(2) {
-//       width: 130px !important;
-//       height: 130px !important;
-//       img {
-//         width: 130px !important;
-//       }
-//     }
-//   }
-// }
 
 @media screen and (max-width: 310px) {
   .villa__inner {
@@ -193,19 +181,4 @@
       margin-bottom: 20px;
     }
   }
-
-  // .villa__grid {
-  //   div {
-  //     width: 120px !important;
-  //     height: 120px !important;
-  //   }
-
-  //   div:nth-child(2) {
-  //     width: 120px !important;
-  //     height: 120px !important;
-  //     img {
-  //       width: 120px !important;
-  //     }
-  //   }
-  // }
 }
