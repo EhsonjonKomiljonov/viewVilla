@@ -111,7 +111,7 @@ export const Contact = () => {
         <div className="contact__map">
           <iframe
             id="myIframe"
-            src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d5958.752156129644!2d70.05670205677457!3d41.6908163928344!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDQxJzI3LjAiTiA3MMKwMDMnNDAuNSJF!5e0!3m2!1sru!2s!4v1685981916239!5m2!1sru!2s"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2979.371876932252!2d70.0612199!3d41.6909071!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38af6b81ce257389%3A0xf0e1bf81977fdd5!2sView%20Villa%20%7C%20DACHA%20SIJJAK!5e0!3m2!1sru!2s!4v1686239926843!5m2!1sru!2s"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
