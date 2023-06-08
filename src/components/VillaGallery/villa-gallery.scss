@@ -2,6 +2,7 @@
   padding: 144px 0 100px;
 
   h2 {
+    font-family: 'Bruno Ace SC';
     margin: 0 0 60px;
     font-weight: 700;
     font-size: 32px;
@@ -11,10 +12,9 @@
     color: #1b1c57;
 
     span {
-      font-family: 'Arial';
       font-weight: 600;
       color: #fff;
-      -webkit-text-stroke: 1px #1b1c57;
+      -webkit-text-stroke: 0.2px #1b1c57;
       -webkit-text-fill-color: transparent;
     }
   }
@@ -241,14 +241,13 @@
 }
 
 @media screen and (max-width: 310px) {
-
   .villa__inner {
     h2 {
       margin-bottom: 20px;
     }
   }
 
-  .villa__grid { 
+  .villa__grid {
     div {
       width: 120px !important;
       height: 120px !important;

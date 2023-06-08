@@ -25,12 +25,12 @@ export const AboutUs = () => {
   };
 
   return (
-    <section className='about__us'>
-      <div className='about__us__inner'>
-        <div className='container framer'>
-          <div className='about__us__left'>
+    <section className="about__us">
+      <div className="about__us__inner">
+        <div className="container framer">
+          <div className="about__us__left">
             <motion.h2
-              className='about__us__title'
+              className="about__us__title"
               initial={{
                 x: -200,
                 y: -50,
@@ -46,10 +46,10 @@ export const AboutUs = () => {
               Biz <span>Haqimizda</span>
             </motion.h2>
             <motion.p
-              className='about__us__text'
+              className="about__us__text"
               variants={container}
-              initial='hidden'
-              whileInView='visible'
+              initial="hidden"
+              whileInView="visible"
             >
               <motion.span variants={child}>
                 Fusce justo mi, vehicula
@@ -91,13 +91,6 @@ export const AboutUs = () => {
             >
               <LearnMoreBtn />
             </motion.div>
-          </div>
-          <div className='about__us__right'>
-            <img
-              src={Line}
-              alt=''
-              className='about__us__line__responsive'
-            />
           </div>
         </div>
       </div>

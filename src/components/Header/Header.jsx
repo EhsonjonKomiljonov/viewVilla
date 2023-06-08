@@ -4,6 +4,9 @@ import Logo from '../../assets/images/logo.svg';
 import { headerNavData } from '../../db/headerNavData';
 import { HeaderNavLink } from '../HeaderNavLink/HeaderNavLink';
 import { motion } from 'framer-motion';
+import HeroImg1 from '../../assets/images/hero-bgi.png';
+import HeroImg2 from '../../assets/images/hero-bgi-2.png';
+import { BlueBtn } from '../BlueBtn/BlueBtn';
 
 export const Header = () => {
   // ====================
@@ -45,17 +48,6 @@ export const Header = () => {
 
   // LOGO ANIMATE
 
-  const icon = {
-    hidden: {
-      pathLength: 0,
-      fill: 'rgba(255, 255, 255, 0)',
-    },
-    visible: {
-      pathLength: 1,
-      fill: 'rgba(255, 255, 255, 1)',
-    },
-  };
-
   return (
     <header className="site-header" ref={menuRef}>
       {/* HEADER TOP */}
@@ -91,7 +83,11 @@ export const Header = () => {
                       {headerNavData.map((item, index) => (
                         <motion.li
                           initial={{ y: 50, opacity: 0 }}
-                          whileInView={{ y: 0, opacity: 1, transition: {duration: 0.7} }}
+                          whileInView={{
+                            y: 0,
+                            opacity: 1,
+                            transition: { duration: 0.7 },
+                          }}
                         >
                           <HeaderNavLink obj={item} />
                         </motion.li>
@@ -152,6 +148,46 @@ export const Header = () => {
                 <motion.span variants={child}>for </motion.span>
                 <motion.span variants={child}>you </motion.span>
               </motion.p>
+              <BlueBtn
+                text="Watch Demo"
+                bg="linear-gradient(269.47deg, #0051ED 2.21%, #2F00B5 97.11%);"
+                width="225px"
+              />
+            </div>
+            <div className="bottom-right">
+              <div className="bottom-right__inner">
+                <div className="bottom-right__first">
+                  <motion.img
+                    src={HeroImg1}
+                    alt=""
+                    initial={{ x: 270, y: 130, scale: 0.8 }}
+                    whileInView={{
+                      x: 0,
+                      y: 10,
+                      scale: 1,
+                      transition: { duration: 1, delay: 2 },
+                    }}
+                  />
+                </div>
+                <motion.div
+                  className="bottom-right__center"
+                  initial={{ height: '0' }}
+                  whileInView={{ height: '740px' }}
+                ></motion.div>
+                <div className="bottom-right__second">
+                  <motion.img
+                    src={HeroImg2}
+                    alt=""
+                    initial={{ x: -250, y: -130, scale: 0.8 }}
+                    whileInView={{
+                      x: 0,
+                      y: 30,
+                      scale: 1,
+                      transition: { duration: 1, delay: 2 },
+                    }}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

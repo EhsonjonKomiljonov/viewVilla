@@ -25,6 +25,7 @@
   border-radius: 20px;
 
   h2 {
+    font-family: 'Bruno Ace SC';
     margin: 0 0 35px;
     font-weight: 800;
     font-size: 32px;
@@ -210,6 +211,14 @@
 }
 
 @media screen and (max-width: 320px) {
+
+  .contact__form {
+    h2 {
+      font-size: 22px;
+      line-height: 33px;
+    }
+  }
+
   .contact__map {
     height: 320px;
     .iframe {

@@ -101,7 +101,7 @@ export const Contact = () => {
                 <BlueBtn
                   type="submit"
                   bg="linear-gradient(269.47deg, #1D4ED8 2.21%, #052D9C 97.11%)"
-                  text="Subscribe Now"
+                  text="Order"
                   displayIcon="none"
                 />
               </Form>
