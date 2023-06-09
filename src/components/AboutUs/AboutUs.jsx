@@ -3,6 +3,7 @@ import { LearnMoreBtn } from './../LearnMoreBtn/LearnMoreBtn';
 import './aboutus.scss';
 import Line from '../../assets/images/line.png';
 import { motion } from 'framer-motion';
+import responsiveBg from '../../assets/images/aboutUsBgMobile.png';
 
 export const AboutUs = () => {
   const container = {
@@ -25,12 +26,12 @@ export const AboutUs = () => {
   };
 
   return (
-    <section className="about__us">
-      <div className="about__us__inner">
-        <div className="container framer">
-          <div className="about__us__left">
+    <section className='about__us'>
+      <div className='about__us__inner'>
+        <div className='container framer'>
+          <div className='about__us__left'>
             <motion.h2
-              className="about__us__title"
+              className='about__us__title'
               initial={{
                 x: -200,
                 y: -50,
@@ -46,10 +47,10 @@ export const AboutUs = () => {
               Biz <span>Haqimizda</span>
             </motion.h2>
             <motion.p
-              className="about__us__text"
+              className='about__us__text'
               variants={container}
-              initial="hidden"
-              whileInView="visible"
+              initial='hidden'
+              whileInView='visible'
             >
               <motion.span variants={child}>
                 Fusce justo mi, vehicula
@@ -91,6 +92,13 @@ export const AboutUs = () => {
             >
               <LearnMoreBtn />
             </motion.div>
+          </div>
+          <div className='about__us__bottom'>
+            <img
+              src={responsiveBg}
+              alt=''
+              className='about__us__bg'
+            />
           </div>
         </div>
       </div>
