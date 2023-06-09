@@ -2,20 +2,21 @@ import React, { useEffect, useRef } from 'react';
 import './seevilla.scss';
 import seeVillaData from './../../db/seevilladb';
 import { SeeVillaBtn } from './../SeeVillaBtn/SeeVillaBtn';
-
 import seeVillaBg from '../../assets/images/seeVillaBg.png';
+import seeVillaBg1 from '../../assets/images/seeVillaBg-1.png';
+import seeVillaBg2 from '../../assets/images/seeVillaBg-2.png';
+import seeVillaBg3 from '../../assets/images/seeVillaBg-3.png';
 import { useMotionValue, useTransform, motion } from 'framer-motion';
 
 export const SeeVilla = () => {
   const x = useMotionValue(200);
   const y = useMotionValue(200);
 
-  const rotateX = useTransform(y, [0, 700], [10, -10]);
-  const rotateY = useTransform(x, [0, 700], [-10, 10]);
+  const rotateX = useTransform(y, [0, 400], [10, -10]);
+  const rotateY = useTransform(x, [0, 400], [-10, 10]);
 
   function handleMouse(event) {
     const rect = event.currentTarget.getBoundingClientRect();
-
     x.set(event.clientX - rect.left);
     y.set(event.clientY - rect.top);
   }
@@ -126,26 +127,64 @@ export const SeeVilla = () => {
                 <SeeVillaBtn />
               </motion.div>
             </div>
-            <motion.div
-              className="see__villa__right"
-              style={{
-                placeItems: 'center',
-                placeContent: 'center',
-                perspective: 400,
-              }}
-              onMouseMove={handleMouse}
-            >
-              <motion.img
-              className='desktop-img'
-                src={seeVillaBg}
-                alt=""
+            <div className="see__villa__right">
+              <motion.div
                 style={{
-                  rotateX: rotateX,
-                  rotateY: rotateY,
+                  placeItems: 'center',
+                  placeContent: 'center',
+                  perspective: 400,
                 }}
-              />
-              <img className='mobile-img' src={seeVillaBg} alt="Villa" />
-            </motion.div>
+                onMouseMove={handleMouse}
+              >
+                <motion.img
+                  className="desktop-img"
+                  src={seeVillaBg}
+                  alt=""
+                  style={{
+                    rotateX: rotateX,
+                    rotateY: rotateY,
+                  }}
+                />
+              </motion.div>
+              <motion.div
+                style={{
+                  placeItems: 'center',
+                  placeContent: 'center',
+                  perspective: 400,
+                }}
+                onMouseMove={handleMouse}
+              >
+                <motion.img
+                  className="mobile-img mobile-img-first"
+                  style={{
+                    rotateX: rotateX,
+                    rotateY: rotateY,
+                  }}
+                  src={seeVillaBg1}
+                  alt="Villa"
+                />
+
+                <motion.img
+                  className="mobile-img mobile-img-second"
+                  style={{
+                    rotateX: rotateX,
+                    rotateY: rotateY,
+                  }}
+                  src={seeVillaBg2}
+                  alt="Villa"
+                />
+
+                <motion.img
+                  className="mobile-img mobile-img-third"
+                  style={{
+                    rotateX: rotateX,
+                    rotateY: rotateY,
+                  }}
+                  src={seeVillaBg3}
+                  alt="Villa"
+                />
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>

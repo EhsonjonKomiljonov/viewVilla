@@ -111,8 +111,51 @@
   background-size: 32px;
 }
 
+.desktop-img {
+  transition: all 0.3s ease;
+}
+
+.see__villa__right:not(:hover) {
+  .desktop-img {
+    transform: none !important;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-img {
+    transform: none !important;
+    transition: all 0.3s ease;
+  }
+}
+
+.see__villa__right:hover {
+  .mobile-img {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transition: all 0.3s ease;
+  }
+}
+
 .mobile-img {
-  display: none;
+  position: absolute;
+}
+
+.mobile-img-first {
+  top: -29.5vw;
+  right: -3vw;
+  z-index: 9;
+}
+
+.mobile-img-second {
+  bottom: 3vw;
+  left: -4vw;
+  z-index: 9;
+}
+
+.mobile-img-third {
+  bottom: -3vw;
+  right: 8vw;
+  z-index: 9;
 }
 
 .see__villa__item:nth-child(1)::before {
@@ -148,17 +191,6 @@
 @media screen and (max-width: 740px) {
   .see__villa__inner {
     flex-direction: column;
-  }
-  .see__villa__right {
-    .desktop-img {
-      display: none;
-    }
-    .mobile-img {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin-top: 30px;
-    }
   }
   .see__villa {
     padding-left: 0;
