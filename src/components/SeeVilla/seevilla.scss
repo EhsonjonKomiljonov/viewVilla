@@ -1,5 +1,5 @@
 .see__villa {
-  padding: 128px 120px 75px 137px;
+  padding: 128px 120px 175px 137px;
   background-image: linear-gradient(269.47deg, #0037d3 2.21%, #002282 97.11%);
   background-position: center;
   background-repeat: no-repeat;
@@ -191,6 +191,26 @@
 .see__villa__item:nth-child(6)::before {
   background-image: url('../../assets/images/livingroom.png');
   background-size: contain;
+}
+
+@media screen and (min-width: 2048px) {
+  .mobile-img-first {
+    top: -460px;
+    right: -40px;
+    z-index: 9;
+  }
+
+  .mobile-img-second {
+    bottom: 40px;
+    left: -60px;
+    z-index: 9;
+  }
+
+  .mobile-img-third {
+    bottom: -40px;
+    right: 120px;
+    z-index: 9;
+  }  
 }
 
 @media screen and (max-width: 1310px) {
