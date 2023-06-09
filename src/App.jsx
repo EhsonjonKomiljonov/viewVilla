@@ -8,28 +8,21 @@ import { Contact } from './components/Contact/Contact';
 import { Footer } from './components/Footer/Footer';
 import { AboutUs } from './components/AboutUs/AboutUs';
 import { motion } from 'framer-motion';
-import { useState } from 'react'; 
+import { useState } from 'react';
+import { Loading } from './components/Loading/Loading';
 
 function App() {
   const [loader, setLoader] = useState(true);
   setTimeout(() => {
     setLoader(false);
-  }, 4000);
-
-  // const container = {
-  //   hidden: { opacity: 0, x: 0 },
-  //   visible: {
-  //     x: [-300, 0, 0],
-  //     scale: [1, 1, 1, 1, 5],
-  //     opacity: [0, 1, 1, 1, 1, 1, 0],
-  //     transition: { duration: 2.7, delay: 1 },
-  //   },
-  // };
+  }, 3500);
 
   if (loader) {
-    return <div className="loader">
-      <h1>LOADING...</h1>
-    </div>;
+    return (
+      <div className="loader">
+        <Loading />
+      </div>
+    );
   }
 
   return (
