@@ -150,7 +150,7 @@ export const Header = () => {
               </motion.p>
               <BlueBtn
                 text="Watch Demo"
-                bg="linear-gradient(269.47deg, #0051ED 2.21%, #2F00B5 97.11%);"
+                bg="linear-gradient(269.47deg, #0051ED 2.21%, #2F00B5 97.11%)"
                 width="225px"
               />
             </div>
@@ -165,7 +165,7 @@ export const Header = () => {
                       x: 0,
                       y: 10,
                       scale: 1,
-                      transition: { duration: 1, delay: 2 },
+                      transition: { duration: 1, },
                     }}
                   />
                 </div>
@@ -183,7 +183,7 @@ export const Header = () => {
                       x: 0,
                       y: 30,
                       scale: 1,
-                      transition: { duration: 1, delay: 2 },
+                      transition: { duration: 1,},
                     }}
                   />
                 </div>

@@ -1,31 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './villa-gallery.scss';
-import Villa1 from '../../assets/images/villa-1.jpg';
-import Villa2 from '../../assets/images/villa-2.svg';
-import Villa3 from '../../assets/images/villa-3.svg';
-import Villa4 from '../../assets/images/villa-4.jpg';
 import { BlueBtn } from '../BlueBtn/BlueBtn';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { villaGalleryData } from '../../db/villaGalleryData';
 
 export const VillaGallery = () => {
-  const container = {
-    hidden: { opacity: 1, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
-      },
-    },
+  const [items, setItems] = useState(villaGalleryData.slice(0, 1));
+
+  const viewAll = () => {
+    items.length === 1
+      ? setItems(villaGalleryData)
+      : setItems(villaGalleryData.slice(0, 1));
   };
 
-  const item = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-    },
+  const openImg = (evt) => {
+    const filteredImg = items.filter((item) => {
+      if (
+        item.id1 == +evt.target.id ||
+        item.id2 == +evt.target.id ||
+        item.id3 == +evt.target.id
+      ) {
+        evt.target.classList.toggle('open');
+        evt.target.parentNode.classList.toggle('open-image');
+        document.body.style.overflow =
+          evt.target.classList == 'open' ? 'hidden' : 'auto';
+      }
+    });
   };
 
   return (
@@ -38,24 +38,46 @@ export const VillaGallery = () => {
           >
             See your dream <span>villa Gallery</span>
           </motion.h2>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={container}
-            className="villa__grid grid"
-          >
-            <motion.div variants={item}>
-              <img src={Villa1} alt="" />
-            </motion.div>
-            <motion.div variants={item}>
-              <img src={Villa2} alt="" />
-            </motion.div>
-            <motion.div variants={item}>
-              <img src={Villa3} alt="" />
-            </motion.div>
-            <motion.div variants={item}>
-              <img src={Villa4} alt="" />
-            </motion.div>
+          <motion.div className="villa__grid grid">
+            {items.map((item) => (
+              <div className="grid__view">
+                <div className="grid__img-box">
+                  <div>
+                    <img
+                      onClick={(evt) => openImg(evt)}
+                      id={item.id1}
+                      src={item.img1}
+                      alt=""
+                    />
+                    <span>{item.text1}</span>
+                  </div>
+                </div>
+                <div className="grid__inner">
+                  <div className="grid__box">
+                    <div>
+                      <img
+                        onClick={(evt) => openImg(evt)}
+                        id={item.id2}
+                        src={item.img2}
+                        alt=""
+                      />
+                      <span>{item.text2}</span>
+                    </div>
+                  </div>
+                  <div className="grid__box">
+                    <div>
+                      <img
+                        onClick={(evt) => openImg(evt)}
+                        id={item.id3}
+                        src={item.img3}
+                        alt=""
+                      />
+                      <span>{item.text3}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </motion.div>
           <motion.div
             initial={{ x: -200 }}
@@ -64,7 +86,10 @@ export const VillaGallery = () => {
               transition: { duration: 0.3, type: 'spring', stiffness: 100 },
             }}
           >
-            <BlueBtn />
+            <BlueBtn
+              text={`${items.length === 1 ? 'See More' : 'Hide'}`}
+              onClick={viewAll}
+            />
           </motion.div>
         </div>
       </div>
