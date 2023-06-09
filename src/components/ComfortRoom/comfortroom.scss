@@ -4,7 +4,9 @@
   position: absolute;
   left: 124px;
   max-width: calc(100% - 150px);
+  max-width: 1330px;
   width: 100%;
+  left: calc(50% - 665px);
 }
 
 .comfort__room__title {
@@ -15,7 +17,7 @@
   line-height: 40px;
   color: #1b1c57;
   font-family: 'Bruno Ace SC';
-  }
+}
 .slick-arrow {
   position: inherit;
 }
@@ -25,19 +27,19 @@
   padding: 12px 16px;
   left: calc(100% - 60px - 236px);
   top: calc(100% + 91px);
-  background-color: #1d4ed8;
+  background-color: #e0e3eb;
   width: 60px;
   height: 52px;
   border-radius: 32px;
   &:hover {
-    background-color: #2d65ff;
+    background-color: #e6e6e6;
   }
   &:active {
-    background-color: #2d65ff;
+    background-color: #e5e5e5;
   }
 
   &:focus {
-    background-color: #2d65ff;
+    background-color: #ececec;
   }
 }
 
@@ -117,4 +119,7 @@
     font-size: 25px;
     line-height: 34px;
   }
+}
+
+@media screen and (min-width: 1540px) {
 }
