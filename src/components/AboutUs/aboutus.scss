@@ -21,6 +21,7 @@
 .framer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .about__us__title {
@@ -85,15 +86,6 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .about__us__right {
-    display: none;
-  }
-  .about__us__inner {
-    transform-origin: rotateZ('90deg');
-  }
-}
-
 @media screen and (max-width: 1150px) {
   .about__us__bg {
     display: block;
@@ -111,6 +103,9 @@
   .about__us__inner {
     background-image: none;
     height: 598px;
+  }
+  .framer {
+    align-items: inherit;
   }
 }
 @media screen and (max-width: 1070px) {
