@@ -2,6 +2,7 @@
   margin-top: 900px;
   background-image: linear-gradient(269.47deg, #0037d3 2.21%, #002282 97.11%),
     linear-gradient(269.47deg, #002aa0 2.21%, #00185a 97.11%);
+  position: relative;
 }
 
 .about__us__inner {
@@ -19,7 +20,6 @@
 
 .framer {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -52,6 +52,14 @@
   width: 100%;
 }
 
+.about__us__bottom {
+  padding-top: 500px;
+}
+
+.about__us__left {
+  z-index: 1;
+}
+
 .about__us__right {
   overflow: hidden;
   width: 100%;
@@ -64,10 +72,11 @@
   left: calc(50% - 50px);
 }
 
+.about__us__bg {
+  display: none;
+}
+
 @media screen and (min-width: 1540px) {
-  .about__us__inner {
-    background-position: calc(50% + 300px);
-  }
 }
 
 @media screen and (max-width: 1300px) {
@@ -80,34 +89,72 @@
   .about__us__right {
     display: none;
   }
+  .about__us__inner {
+    transform-origin: rotateZ('90deg');
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .about__us__bg {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    max-width: 570px;
+    min-width: 300px;
+    width: 100%;
+
+    max-height: 750px;
+    min-height: 300px;
+    width: 100%;
+  }
+  .about__us__inner {
+    background-image: none;
+    height: 598px;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .about__us__bg {
+    bottom: 0;
+    max-width: 370px;
+    width: 100%;
+    right: 0;
+    max-height: 359px;
+    width: 100%;
+  }
+  .about__us__inner {
+    background-image: none;
+  }
 }
 
 @media screen and (max-width: 1000px) {
   .about__us__right {
     width: 0;
   }
+  .about__us__inner {
+    height: 779px;
+  }
 }
 
-@media screen and (max-width: 720px) {
-  .about__us__text {
-    color: #3d3d3d;
-    font-size: 14px;
-  }
+@media screen and (max-width: 800px) {
   .about__us__title {
     font-size: 40px;
-    color: #3d3d3d;
-    span {
-      -webkit-text-stroke-color: #3d3d3d;
-      -webkit-text-fill-color: transparent;
-    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .about__us__bg {
+    bottom: 0;
+    margin-top: 30px;
+    max-width: 365px;
+    width: 100%;
+    right: 0;
+    max-height: 300px;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 525px) {
-  .about__us__left {
-    padding: 180px 0;
-  }
-
   .about__us__title {
     font-size: 44px;
     line-height: 50px;
@@ -116,10 +163,6 @@
   .about__us__text {
     font-size: 15px;
     line-height: 20px;
-  }
-
-  .about__us__right {
-    display: none;
   }
 }
 
