@@ -1,0 +1,91 @@
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  video {
+    width: 100%;
+    height: 500px;
+    border: none;
+    outline: none;
+  }
+}
+
+.loader > p {
+  font-family: 'Bruno Ace SC';
+  position: absolute;
+  top: 350px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 92px;
+  line-height: 116px;
+}
+
+@media screen and (max-width: 675px) {
+  .loader > p {
+    font-size: 76px;
+    line-height: 96px;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .loader > img {
+    max-width: 350px;
+  }
+  .loader > p {
+    font-size: 46px;
+    line-height: 56px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .loader p {
+    top: 330px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .loader > img {
+    max-width: 290px;
+  }
+  .loader > p {
+    top: 300px;
+    font-size: 36px !important;
+    line-height: 46px !important;
+  }
+}
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  font-size: 60px;
+}
+
+.waviy span {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    88.34deg,
+    #096fa9 1.85%,
+    rgba(9, 111, 169, 0.3) 86.47%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation-name: waviy;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes waviy {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-50px);
+  }
+}
