@@ -13,9 +13,9 @@ import { Loading } from './components/Loading/Loading';
 
 function App() {
   const [loader, setLoader] = useState(true);
-  // setTimeout(() => {
-  //   setLoader(false);
-  // }, 3500);
+  setTimeout(() => {
+    setLoader(false);
+  }, 3500);
 
   if (loader) {
     return (
