@@ -3,12 +3,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
+  
   video {
     width: 100%;
     height: 500px;
-    border: none;
-    outline: none;
+    border: none; 
+    outline: 4px solid white;
+    outline-offset: -4px;
   }
 }
 
