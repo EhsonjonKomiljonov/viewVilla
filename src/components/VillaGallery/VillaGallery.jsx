@@ -42,29 +42,38 @@ export const VillaGallery = () => {
             {items.map((item) => (
               <div className="grid__view">
                 <div className="grid__img-box">
-                  <img
-                    onClick={(evt) => openImg(evt)}
-                    id={item.id1}
-                    src={item.img1}
-                    alt=""
-                  />
+                  <div>
+                    <img
+                      onClick={(evt) => openImg(evt)}
+                      id={item.id1}
+                      src={item.img1}
+                      alt=""
+                    />
+                    <span>{item.text1}</span>
+                  </div>
                 </div>
                 <div className="grid__inner">
-                  <div>
-                    <img
-                      onClick={(evt) => openImg(evt)}
-                      id={item.id2}
-                      src={item.img2}
-                      alt=""
-                    />
+                  <div className="grid__box">
+                    <div>
+                      <img
+                        onClick={(evt) => openImg(evt)}
+                        id={item.id2}
+                        src={item.img2}
+                        alt=""
+                      />
+                      <span>{item.text2}</span>
+                    </div>
                   </div>
-                  <div>
-                    <img
-                      onClick={(evt) => openImg(evt)}
-                      id={item.id3}
-                      src={item.img3}
-                      alt=""
-                    />
+                  <div className="grid__box">
+                    <div>
+                      <img
+                        onClick={(evt) => openImg(evt)}
+                        id={item.id3}
+                        src={item.img3}
+                        alt=""
+                      />
+                      <span>{item.text3}</span>
+                    </div>
                   </div>
                 </div>
               </div>
