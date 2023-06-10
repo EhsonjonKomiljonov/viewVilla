@@ -47,6 +47,34 @@
   background-image: url('../../assets/images/homeCarousel.svg');
 }
 
+@media screen and (max-width: 750px) {
+  .comfort__room__card {
+    width: 100%;
+    max-width: 250px;
+
+    img {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+
+  .comfort__room__span {
+    top: 235px;
+    left: 9px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .comfort__room__card {
+    width: 100%;
+    max-width: auto;
+    margin: 0 auto; 
+    img {
+      width: 100%;
+      max-width: auto;
+    }
+  }
+}
+
 @media screen and (max-width: 385px) {
   .comfort__room__card {
     width: 100%;
