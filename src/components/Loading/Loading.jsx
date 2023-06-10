@@ -4,7 +4,6 @@ import Loader from '../../assets/videos/loader.mp4';
 import { motion } from 'framer-motion';
 
 export const Loading = () => {
-
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -15,7 +14,13 @@ export const Loading = () => {
 
   return (
     <div className="loader">
-      <video className='loader-video' src={Loader} autoPlay muted playsInline></video>
+      <video
+        className="loader-video"
+        src={Loader}
+        autoPlay
+        muted
+        playsInline
+      ></video>
       <motion.p
         className="waviy"
         variants={container}

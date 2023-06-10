@@ -52,18 +52,20 @@ export const ComfortRoom = () => {
   };
 
   return (
-    <section className='comfort__room'>
-      <div className='comfort__room__inner'>
+    <section className="comfort__room">
+      <div className="comfort__room__inner">
         <motion.h2
-          className='comfort__room__title'
+          className="comfort__room__title"
           initial={{ x: -240 }}
+          viewport={{ once: true }}
           whileInView={{ x: 0, transition: { duration: 1, type: 'spring' } }}
         >
           Qulay xonalar
         </motion.h2>
         <motion.div
-          initial='hidden'
-          whileInView='visible'
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
           variants={container}
         >
           <Slider {...settings}>

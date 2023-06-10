@@ -7,7 +7,6 @@ import { VillaGallery } from './components/VillaGallery/VillaGallery';
 import { Contact } from './components/Contact/Contact';
 import { Footer } from './components/Footer/Footer';
 import { AboutUs } from './components/AboutUs/AboutUs';
-import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Loading } from './components/Loading/Loading';
 

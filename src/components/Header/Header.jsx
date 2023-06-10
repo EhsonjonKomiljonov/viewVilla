@@ -46,7 +46,7 @@ export const Header = () => {
     },
   };
 
-  // LOGO ANIMATE
+  // LOGO
 
   return (
     <header className="site-header" ref={menuRef}>
@@ -83,6 +83,7 @@ export const Header = () => {
                       {headerNavData.map((item, index) => (
                         <motion.li
                           initial={{ y: 50, opacity: 0 }}
+                          viewport={{ once: true }}
                           whileInView={{
                             y: 0,
                             opacity: 1,
@@ -110,6 +111,7 @@ export const Header = () => {
               <motion.h1
                 variants={container}
                 initial="hidden"
+                viewport={{ once: true }}
                 whileInView="visible"
               >
                 <motion.span variants={child}>orzuyingizdagi </motion.span>
@@ -126,6 +128,7 @@ export const Header = () => {
               <motion.p
                 variants={container}
                 initial="hidden"
+                viewport={{ once: true }}
                 whileInView="visible"
               >
                 <motion.span variants={child}>Everything </motion.span>
@@ -161,17 +164,19 @@ export const Header = () => {
                     src={HeroImg1}
                     alt=""
                     initial={{ x: 270, y: 130, scale: 0.8 }}
+                    viewport={{ once: true }}
                     whileInView={{
                       x: 0,
                       y: 10,
                       scale: 1,
-                      transition: { duration: 1, },
+                      transition: { duration: 1 },
                     }}
                   />
                 </div>
                 <motion.div
                   className="bottom-right__center"
                   initial={{ height: '0' }}
+                  viewport={{ once: true }}
                   whileInView={{ height: '740px' }}
                 ></motion.div>
                 <div className="bottom-right__second">
@@ -179,11 +184,12 @@ export const Header = () => {
                     src={HeroImg2}
                     alt=""
                     initial={{ x: -250, y: -130, scale: 0.8 }}
+                    viewport={{ once: true }}
                     whileInView={{
                       x: 0,
                       y: 30,
                       scale: 1,
-                      transition: { duration: 1,},
+                      transition: { duration: 1 },
                     }}
                   />
                 </div>

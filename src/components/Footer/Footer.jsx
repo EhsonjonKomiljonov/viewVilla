@@ -12,6 +12,7 @@ export const Footer = () => {
         transition: { type: 'tween', duration: 0.5 },
         opacity: 1,
       }}
+      viewport={{ once: true }}
       className="site-footer"
     >
       <div className="container">
@@ -22,6 +23,7 @@ export const Footer = () => {
               style={{ display: 'block' }}
               href="/"
               initial={{ x: -200 }}
+              viewport={{ once: true }}
               whileInView={{
                 x: 0,
                 transition: { duration: 0.5, type: 'spring', stiffness: 100 },
@@ -36,6 +38,7 @@ export const Footer = () => {
             <ul>
               <motion.li
                 initial={{ y: 30 }}
+                viewport={{ once: true }}
                 whileInView={{
                   y: 0,
                   transition: { type: 'spring', duration: 1, stiffness: 80 },
@@ -47,6 +50,7 @@ export const Footer = () => {
               </motion.li>
               <motion.li
                 initial={{ y: 50 }}
+                viewport={{ once: true }}
                 whileInView={{
                   y: 0,
                   transition: { type: 'spring', duration: 1, stiffness: 80 },
@@ -58,6 +62,7 @@ export const Footer = () => {
               </motion.li>
               <motion.li
                 initial={{ y: 70 }}
+                viewport={{ once: true }}
                 whileInView={{
                   y: 0,
                   transition: { type: 'spring', duration: 1, stiffness: 80 },
@@ -70,6 +75,7 @@ export const Footer = () => {
           <div className="site-footer__left right">
             <motion.div
               initial={{ y: -60 }}
+              viewport={{ once: true }}
               whileInView={{
                 y: 0,
                 transition: { duration: 0.5, type: 'spring', stiffness: 100 },
@@ -90,6 +96,7 @@ export const Footer = () => {
             </motion.div>
             <motion.div
               initial={{ y: 60 }}
+              viewport={{ once: true }}
               whileInView={{
                 y: 0,
                 transition: { duration: 0.5, type: 'spring', stiffness: 100 },

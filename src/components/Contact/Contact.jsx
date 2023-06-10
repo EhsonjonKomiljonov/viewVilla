@@ -61,6 +61,7 @@ export const Contact = () => {
                 duration: 1,
               },
             }}
+            viewport={{ once: true }}
           >
             <h2>Hoziroq bron qiling</h2>
             <Formik

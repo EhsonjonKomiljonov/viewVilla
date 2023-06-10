@@ -35,6 +35,7 @@ export const VillaGallery = () => {
           <motion.h2
             initial={{ y: -40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5 } }}
+            viewport={{ once: true }}
           >
             See your dream <span>villa Gallery</span>
           </motion.h2>
@@ -81,6 +82,7 @@ export const VillaGallery = () => {
           </motion.div>
           <motion.div
             initial={{ x: -200 }}
+            viewport={{ once: true }}
             whileInView={{
               x: 0,
               transition: { duration: 0.3, type: 'spring', stiffness: 70 },

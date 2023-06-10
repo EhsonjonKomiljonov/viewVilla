@@ -70,6 +70,7 @@ export const SeeVilla = () => {
                 className="see__villa__title"
                 variants={container}
                 initial="hidden"
+                viewport={{ once: true }}
                 whileInView="visible"
               >
                 <motion.span variants={child}>Sayohat qiling va </motion.span>
@@ -85,6 +86,7 @@ export const SeeVilla = () => {
                 className="see__villa__text"
                 variants={container}
                 initial="hidden"
+                viewport={{ once: true }}
                 whileInView="visible"
               >
                 <motion.span variants={child}>
@@ -101,6 +103,7 @@ export const SeeVilla = () => {
               <p className="see__villa__info">Villa ma’lumotlari</p>
               <motion.ul
                 initial="hidden"
+                viewport={{ once: true }}
                 whileInView="visible"
                 variants={parent}
                 className="see__villa__list"
@@ -119,6 +122,7 @@ export const SeeVilla = () => {
               </motion.ul>
               <motion.div
                 initial={{ x: -200 }}
+                viewport={{ once: true }}
                 whileInView={{
                   x: 0,
                   transition: { duration: 1, type: 'spring', stiffness: 100 },
