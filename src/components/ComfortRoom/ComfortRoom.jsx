@@ -11,6 +11,12 @@ export const ComfortRoom = () => {
     slidesToShow: 3.4,
     slidesToScroll: 0.6,
     autoplaySpeed: 2000,
+    arrows: true,
+    useTransform: true,
+    pauseOnHover: false,
+    changeDir: true,
+    draggable: false,
+
     responsive: [
       {
         breakpoint: 1300,
@@ -22,7 +28,7 @@ export const ComfortRoom = () => {
         },
       },
       {
-        breakpoint: 940,
+        breakpoint: 550,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -39,26 +45,30 @@ export const ComfortRoom = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 1, 
-        type: 'tween'
+        duration: 1,
+        type: 'tween',
       },
     },
-  }; 
+  };
 
   return (
-    <section className="comfort__room">
-      <div className="comfort__room__inner">
+    <section className='comfort__room'>
+      <div className='comfort__room__inner'>
         <motion.h2
-          className="comfort__room__title"
+          className='comfort__room__title'
           initial={{ x: -240 }}
           whileInView={{ x: 0, transition: { duration: 1, type: 'spring' } }}
         >
           Qulay xonalar
         </motion.h2>
-        <motion.div initial="hidden" whileInView="visible" variants={container}>
+        <motion.div
+          initial='hidden'
+          whileInView='visible'
+          variants={container}
+        >
           <Slider {...settings}>
-            {comfortRoomDb.map((el) => ( 
-                <ComfortRoomCard el={el} /> 
+            {comfortRoomDb.map((el) => (
+              <ComfortRoomCard el={el} />
             ))}
           </Slider>
         </motion.div>
