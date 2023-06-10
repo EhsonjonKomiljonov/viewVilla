@@ -95,10 +95,77 @@
     }
 
     button {
-      width: 100%;
+      width: 100% !important;
+      max-width: 100%;
     }
   }
 }
+
+// SEND BUTTON LOADING
+
+.load {
+  position: relative;
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  transition: all 0.3s ease;
+
+  &:hover {
+    outline: none;
+  }
+
+  &::before {
+    position: absolute;
+    right: calc(50% - 30px);
+    top: -10px;
+    width: 50px;
+    height: 60px;
+    margin: 0 auto;
+    background-image: url('../../assets/images/loading-btn.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 40px;
+    transition: all 0.3s ease;
+    content: '';
+  }
+}
+
+.success {
+  position: relative;
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  transition: all 0.3s ease;
+
+  &:hover {
+    outline: none;
+  }
+
+  &::before {
+    position: absolute;
+    right: calc(50% - 30px);
+    top: -12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 30px;
+    line-height: 40px;
+    border: 2px solid #11cb11;
+    color: #11cb11;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    content: '✔';
+  }
+}
+
+// SEND BUTTON LOADING
 
 @media screen and (min-width: 1400px) {
   .contact__form {
@@ -211,7 +278,6 @@
 }
 
 @media screen and (max-width: 320px) {
-
   .contact__form {
     h2 {
       font-size: 22px;

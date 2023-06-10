@@ -87,7 +87,7 @@ export const AboutUs = () => {
               whileInView={{
                 x: 0,
                 opacity: 1,
-                transition: { duration: 0.5, stiffness: 100, type: 'spring' },
+                transition: { duration: 0.5, stiffness: 70, type: 'spring' },
               }}
             >
               <LearnMoreBtn />

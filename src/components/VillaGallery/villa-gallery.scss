@@ -34,8 +34,8 @@
   }
 
   &__view:nth-child(even) {
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
     flex-direction: row-reverse;
   }
 
@@ -52,6 +52,21 @@
 
     .grid__box + .grid__box {
       margin-top: 1vw;
+    }
+  }
+
+  &__view:not(:first-child) {
+    .grid__inner {
+      display: flex;
+
+      img {
+        width: 21.78vw;
+        height: 43vw;
+      }
+
+      .grid__box:nth-child(2) {
+        margin: 0 0 0 1vw;
+      }
     }
   }
 
@@ -149,6 +164,40 @@
 @media screen and (min-width: 1250px) {
   .grid {
     width: 1100px;
+
+    &__view:not(:first-child) {
+      .grid__inner {
+        display: flex;
+
+        img {
+          width: 265px;
+          height: 530px;
+        }
+
+        .grid__box:nth-child(2) {
+          margin: 0 0 0 1vw;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .grid {
+    &__view:not(:first-child) {
+      .grid__inner {
+        display: flex;
+
+        img {
+          width: 21.78vw;
+          height: 43vw;
+        }
+
+        .grid__box:nth-child(2) {
+          margin: 0 0 0 1vw;
+        }
+      }
+    }
   }
 }
 
@@ -182,13 +231,23 @@
       flex-direction: column !important;
 
       .grid__inner {
-        margin: 20px 0 0 0 !important;
+        margin: 1vw 0 0 0 !important;
       }
     }
 
-    &__inner {
-      margin-top: 20px;
-      margin-left: 0;
+    &__view:not(:first-child) {
+      .grid__inner {
+        display: flex;
+
+        img {
+          width: 100%;
+          height: 43vw;
+        }
+
+        .grid__box:nth-child(2) {
+          margin: 0 0 0 1vw;
+        }
+      }
     }
   }
 }

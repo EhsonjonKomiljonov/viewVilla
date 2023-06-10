@@ -83,7 +83,7 @@ export const VillaGallery = () => {
             initial={{ x: -200 }}
             whileInView={{
               x: 0,
-              transition: { duration: 0.3, type: 'spring', stiffness: 100 },
+              transition: { duration: 0.3, type: 'spring', stiffness: 70 },
             }}
           >
             <BlueBtn
