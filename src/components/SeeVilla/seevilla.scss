@@ -1,5 +1,5 @@
 .see__villa {
-  padding: 128px 120px 75px 137px;
+  padding: 128px 120px 175px 137px;
   background-image: linear-gradient(269.47deg, #0037d3 2.21%, #002282 97.11%);
   background-position: center;
   background-repeat: no-repeat;
@@ -111,8 +111,61 @@
   background-size: 32px;
 }
 
+.see__villa__right {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 0 30px;
+  margin-top: 90px;
+}
+
+.desktop-img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.see__villa__right:not(:hover) {
+  .desktop-img {
+    transform: none !important;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-img {
+    transform: none !important;
+    transition: all 0.3s ease;
+  }
+}
+
+.see__villa__right:hover {
+  .mobile-img {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transition: all 0.3s ease;
+  }
+}
+
 .mobile-img {
-  display: none;
+  position: absolute;
+}
+
+.mobile-img-first {
+  top: -460px;
+  right: -3vw;
+  z-index: 9;
+}
+
+.mobile-img-second {
+  bottom: 3vw;
+  left: -4vw;
+  z-index: 9;
+}
+
+.mobile-img-third {
+  bottom: -3vw;
+  right: 8vw;
+  z-index: 9;
 }
 
 .see__villa__item:nth-child(1)::before {
@@ -140,6 +193,26 @@
   background-size: contain;
 }
 
+@media screen and (min-width: 2048px) {
+  .mobile-img-first {
+    top: -460px;
+    right: -40px;
+    z-index: 9;
+  }
+
+  .mobile-img-second {
+    bottom: 40px;
+    left: -60px;
+    z-index: 9;
+  }
+
+  .mobile-img-third {
+    bottom: -40px;
+    right: 120px;
+    z-index: 9;
+  }  
+}
+
 @media screen and (max-width: 1310px) {
   .see__villa__inner {
     flex-direction: column;
@@ -149,20 +222,19 @@
   .see__villa__inner {
     flex-direction: column;
   }
-  .see__villa__right {
-    .desktop-img {
-      display: none;
-    }
-    .mobile-img {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin-top: 30px;
-    }
-  }
   .see__villa {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .see__villa__right {
+    max-width: 400px;
+
+    .mobile-img-first {
+      top: -380px;
+    }
   }
 }
 
@@ -170,6 +242,31 @@
   .see__villa__item {
     margin-left: 48px !important;
     padding: 3px 0;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .see__villa__right {
+    max-width: 340px;
+
+    .mobile-img-first {
+      top: -340px;
+      width: 170px;
+    }
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .see__villa__right {
+    max-width: 300px;
+
+    .mobile-img-first {
+      top: -280px;
+    }
+
+    .mobile-img-second {
+      width: 90px;
+    }
   }
 }
 
@@ -182,5 +279,17 @@
   p {
     font-size: 15px !important;
     line-height: 20px !important;
+  }
+
+  .see__villa__right {
+
+    .mobile-img-first {
+      top: -240px;
+      width: 130px;
+    }
+
+    .mobile-img-third {
+      width: 70px;
+    }
   }
 }
